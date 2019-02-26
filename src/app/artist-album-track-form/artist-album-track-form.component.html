@@ -1,0 +1,62 @@
+
+<div class="container">
+  <form>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">{{searchOption}}</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control"  [placeholder]="searchOption">
+      </div>
+    </div>
+    
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Search by</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" 
+              type="radio" 
+              name="gridRadios" 
+              id="AlbumRadio" 
+              value="Album"
+              [(ngModel)]="searchOption" 
+              checked
+            >
+            <label class="form-check-label">
+              Search by album
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" 
+              type="radio" 
+              name="gridRadios" 
+              id="ArtistRadio" 
+              value="Artist"
+              [(ngModel)]="searchOption"
+            >
+            <label class="form-check-label">
+              Search by artist
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <input class="form-check-input" 
+              type="radio" 
+              name="gridRadios" 
+              id="SongRadio" 
+              value="Song"
+              [(ngModel)]="searchOption"
+            >
+            <label class="form-check-label">
+              Search a song
+            </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+   
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-danger">Search {{searchOption}}</button>
+      </div>
+    </div>
+  </form>
+</div>

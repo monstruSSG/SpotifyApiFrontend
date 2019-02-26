@@ -1,0 +1,18 @@
+<app-header></app-header>
+<main role="main">
+
+  <div class="jumbotron">
+      <div class="row">
+        <app-artist-description  *ngFor="let track of tracks" [track]="track" (click)="navigate(track)"></app-artist-description>  
+      </div>
+  
+      <button class="btn btn-warning" (click)="getRecomandations()">
+          Get Recomandations
+      </button>
+      <button class="btn btn-danger" (click)="onLogin()">
+          Login
+      </button>
+  </div>
+
+
+</main>
